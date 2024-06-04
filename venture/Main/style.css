@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+
+body {
+    margin: 0;
+    font-family: 'Crimson Text', serif; /* Updated to use 'Crimson Text' font */
+    text-align: center;
+}
+
+header .header-image {
+    width: 100%;
+    height: 540px; /* Adjust height as needed */
+    background-image: url('header_oxbow.jpg');
+    background-size: cover;
+    background-position: center;
+    pointer-events: none; /* Prevents dragging */
+    user-select: none; /* Prevents text selection */
+    -webkit-user-drag: none; /* Prevents dragging in WebKit browsers */
+}
+
+header .header-bar {
+    width: 50%; /* Adjust width as needed */
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Translucent background */
+    position: absolute;
+    top: 27%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the bar vertically and horizontally */
+    text-align: left; /* Left-align the text */
+    font-size: 24px; /* Adjust font size as needed */
+    box-sizing: border-box;
+    font-family: "Cutive Mono", monospace;
+}
+
+.intro {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: left;
+}
+
+.intro p {
+    max-width: 800px; /* Adjust as needed */
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.profiles {
+    display: flex;
+    justify-content: center;
+    gap: 8px; /* Adjust the gap to make the profiles closer */
+    padding: 8px;
+}
+
+.profile {
+    width: 45%;
+    text-align: center;
+    position: relative;
+}
+
+.profile a {
+    display: block;
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+}
+
+.profile img {
+    width: 100%;
+    height: auto;
+    max-width: 500px; /* Set maximum width to ensure consistency */
+    aspect-ratio: 1/1; /* Ensure the images remain square */
+    object-fit: cover; /* Ensure the images fill the space without distortion */
+    transition: opacity 0.3s ease;
+}
+
+.profile-image {
+    position: relative;
+}
+
+.profile-description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 10px;
+    text-align: center;
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+}
+
+/* Darkening effect on hover */
+.profile-image:hover img {
+    opacity: 0.7; /* Adjust opacity for the darkening effect */
+}
+
+/* Show description on hover */
+.profile-image:hover .profile-description {
+    opacity: 1;
+}
+
+/* Ensure the description covers the image precisely */
+.profile a {
+    display: block;
+    position: relative;
+}
